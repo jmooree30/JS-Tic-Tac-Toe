@@ -1,0 +1,41 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  height:100%
+  width:100%;
+}
+
+.container{
+  margin:0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  height: 300px;
+  width:300px;
+
+}
+.mystyle{
+  padding-top: 30px;
+  text-align: center;
+  width: 33%;
+  box-sizing: border-box;
+  height:33%;
+}
+
+.mystyle:nth-child(1),
+.mystyle:nth-child(4),
+.mystyle:nth-child(7),
+.mystyle:nth-child(2),
+.mystyle:nth-child(5),
+.mystyle:nth-child(8){
+  border-right:1px solid black;
+}
+.mystyle:nth-child(1),
+.mystyle:nth-child(2),
+.mystyle:nth-child(3),
+.mystyle:nth-child(4),
+.mystyle:nth-child(5),
+.mystyle:nth-child(6){
+  border-bottom:1px solid black;
+}
