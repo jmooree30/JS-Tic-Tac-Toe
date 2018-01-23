@@ -9,6 +9,10 @@ const Player = (name,piece) => {
  return {name, piece}
 };
 
+player1 = Player("Jacob","X")
+player2 = Player("Vlad","O")
+console.log(player1.name)
+
 function grid(){
   for(i=0;i<gameboard.board.length;i++){
     var div = document.createElement('div');
@@ -28,15 +32,16 @@ function removeGrid(){
   }
 }
 
+function choice(){
+  clickables = document.querySelectorAll(".mystyle")
+  for(i=0;i<clickables.length;i++){
+    clickables[i].addEventListener("click", function(e){
+      removeGrid()
+      gameboard.board[e.target.dataset.number] = "X"
+      grid()
+    });
+  } 
+}
+
 grid()
 
-function choice(){
-clickables = document.querySelectorAll(".mystyle")
-for(i=0;i<clickables.length;i++){
-  clickables[i].addEventListener("click", function(e){
-  removeGrid()
-  gameboard.board[e.target.dataset.number] = "X"
-  grid()
-});
-} 
-}
