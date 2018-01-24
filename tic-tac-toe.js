@@ -74,10 +74,10 @@ function checkWin(player){
       gameboard.board[winConditions[i][1]] == player &&
       gameboard.board[winConditions[i][2]] == player){
       alert("You win!")
-    break;
+      win = true 
   }
 }
-if (!gameboard.board.includes("")){
+if (!gameboard.board.includes("") && win != true){
   alert("tie game!");
 }
 }
