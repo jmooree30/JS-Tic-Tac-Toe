@@ -61,6 +61,7 @@ function choice(player1, player2){
 }
 
 function checkWin(player, playername){
+  win = false
   const winConditions = [
   [0, 1, 2],
   [3, 4, 5],
@@ -85,13 +86,17 @@ function checkWin(player, playername){
     .then((value) => {
       swal(window.location.reload(true));
     });
-    
     win = true 
   }
 }
 if (!gameboard.board.includes("") && win != true){
-  newGame()
-  alert("tie game!");
+        swal({
+        title: "Tie Game!",
+        button: "New game",
+      })
+    .then((value) => {
+      swal(window.location.reload(true));
+    });
 }
 }
 
